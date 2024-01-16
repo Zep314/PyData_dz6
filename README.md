@@ -24,23 +24,23 @@
 
     venv/bin/activate.bat
     pip install scrapy
-    scrapy startproject jofel
+    scrapy startproject unsplash
 
 Генерируем нового паука
 
-    cd jofel/jofel/spiders/
-    scrapy genspider categories "jofel.ru/catalog/"
+    cd unsplash/unsplash/spiders/
+    scrapy genspider -t crawl unsplash_images "unsplash.com"
 
-Редактируем код паука: [jofel/jofel/spiders/categories.py](jofel/jofel/spiders/categories.py)
+Редактируем код паука: [unsplash/unsplash/spiders/unsplash_images.py](unsplash/unsplash/spiders/unsplash_images.py)
 
 Запускае паука в работу:
 
     cd jofel
-    scrapy crawl categories -o output.json
+    scrapy crawl unsplash_images -o output.json
 
 #### Результат работы:
 
-Файл с данными: [jofel/output.json](jofel/output.json)
+Файл с данными: [unsplash/output.json](jofel/output.json)
 
 Вывод программы:
 
