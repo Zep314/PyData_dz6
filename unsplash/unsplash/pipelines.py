@@ -5,9 +5,18 @@
 
 
 # useful for handling different item types with a single interface
-from itemadapter import ItemAdapter
+
+from scrapy.pipelines.images import ImagesPipeline
+import os
 
 
 class UnsplashPipeline:
-    def process_item(self, item, spider):
+    @staticmethod
+    def process_item(item, spider):
         return item
+
+
+class CustomImagesPipeline(ImagesPipeline):
+    def file_path(self, request, response=None, info=None, *, item=None):
+        #file_path = os.path.join(item['category'][0], f"{item['name'][0]}.jpg")
+        return item['file_path'][0]

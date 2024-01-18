@@ -33,14 +33,14 @@
 
 Редактируем код паука: [unsplash/unsplash/spiders/unsplash_images.py](unsplash/unsplash/spiders/unsplash_images.py)
 
-Запускае паука в работу:
+Запускаем паука в работу:
 
-    cd jofel
-    scrapy crawl unsplash_images -o output.json
+    cd unsplash
+    scrapy crawl unsplash_images --set FEED_URI=scraped_data.csv --set FEED_FORMAT=csv
 
 #### Результат работы:
 
-Файл с данными: [unsplash/output.json](jofel/output.json)
+Файл с данными: [unsplash/scraped_data.csv ](unsplash/scraped_data.csv )
 
 Вывод программы:
 

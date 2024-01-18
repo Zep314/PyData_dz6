@@ -66,6 +66,11 @@ ROBOTSTXT_OBEY = True
 #    "unsplash.pipelines.UnsplashPipeline": 300,
 #}
 
+ITEM_PIPELINES = {
+                  # 'scrapy.pipelines.images.ImagesPipeline': 1,
+                  'unsplash.pipelines.CustomImagesPipeline': 1,
+                  }
+
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
 #AUTOTHROTTLE_ENABLED = True
@@ -91,3 +96,6 @@ ROBOTSTXT_OBEY = True
 REQUEST_FINGERPRINTER_IMPLEMENTATION = "2.7"
 TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
+
+IMAGES_STORE = 'scraped_images'
+FEED_EXPORT_FIELDS = ['category', 'name', 'file_path','image_urls']
