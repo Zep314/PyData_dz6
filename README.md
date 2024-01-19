@@ -34,11 +34,11 @@
 
 Редактируем код паука: [unsplash/unsplash/spiders/unsplash_images.py](unsplash/unsplash/spiders/unsplash_images.py)
 
-Настраиваем обработку дополнительных полей [unsplash/items.py](unsplash/items.py)
+Настраиваем обработку дополнительных полей [unsplash/unsplash/items.py](unsplash/unsplash/items.py)
 
-Настраиваем промежуточную обработку [unsplash/pipelines.py](unsplash/pipelines.py)
+Настраиваем промежуточную обработку [unsplash/unsplash/pipelines.py](unsplash/unsplash/pipelines.py)
 
-Корректируем настройки [unsplash/settings.py](unsplash/settings.py)
+Корректируем настройки [unsplash/unsplash/settings.py](unsplash/unsplash/settings.py)
 
 Запускаем паука в работу:
 
