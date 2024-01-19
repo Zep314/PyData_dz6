@@ -15,7 +15,7 @@
 #    соответствовать одному изображению и содержать URL изображения, локальный путь к файлу (после загрузки),
 #    название и категорию.
 
-TARGET_URL = 'https://jofel.ru/'
+TARGET_URL = 'https://unsplash.com/'
 
 if __name__ == '__main__':
     print('See README.md')

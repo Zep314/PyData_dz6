@@ -5,12 +5,13 @@ from itemloaders.processors import MapCompose
 from ..items import UnsplashItem
 import os
 
+
 class UnsplashImagesSpider(CrawlSpider):
     name = "unsplash_images"
     allowed_domains = ["unsplash.com"]
     start_urls = ["https://unsplash.com"]
-    rules = (Rule(LinkExtractor(restrict_xpaths='//div[@class="pRk2s"]/ul/li/a'), follow=True),
-             Rule(LinkExtractor(restrict_xpaths='//div[@class="zmDAx"]/a'), callback="parse_item"),
+    rules = (Rule(LinkExtractor(restrict_xpaths='//div[@class="pRk2s"]/ul/li/a'), follow=True),  # Переходы между темами
+             Rule(LinkExtractor(restrict_xpaths='//div[@class="zmDAx"]/a'), callback="parse_item"),  #обработка страницы
              )
 
     @staticmethod

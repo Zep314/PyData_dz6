@@ -98,4 +98,4 @@ TWISTED_REACTOR = "twisted.internet.asyncioreactor.AsyncioSelectorReactor"
 FEED_EXPORT_ENCODING = "utf-8"
 
 IMAGES_STORE = 'scraped_images'
-FEED_EXPORT_FIELDS = ['category', 'name', 'file_path','image_urls']
+FEED_EXPORT_FIELDS = ['category', 'name', 'file_path', 'image_urls']
